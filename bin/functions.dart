@@ -1,5 +1,8 @@
-import 'package:functions/functions.dart' as functions;
+void main() {
+  sum();
+}
 
-void main(List<String> arguments) {
-  print('Hello world: ${functions.calculate()}!');
+// !function no parameter no return value
+void sum() {
+  print(2 + 3);
 }
