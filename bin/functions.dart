@@ -11,6 +11,9 @@ void main() {
 
   // *Optional Parameter
   sumOptionalParams(a: 100, b: 150, c: 15);
+
+  // *Function pass inside other Function
+  sumFunction(5, 6, sumParams);
 }
 
 // !function no parameter no return value
@@ -38,4 +41,10 @@ void sumRequired({required int firstNumber, required int secondNumber}) {
 
 void sumOptionalParams({required int a, required int b, int c = 0}) {
   print('Sum Optional Parameter: ${a + b + c}');
+}
+
+// !Function pass inside other Function
+
+void sumFunction(int a, int b, void Function(int, int) customSum) {
+  customSum(a, b);
 }
