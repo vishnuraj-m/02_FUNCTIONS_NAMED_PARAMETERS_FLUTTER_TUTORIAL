@@ -8,3 +8,5 @@ in `lib/`, and example unit test in `test/`.
 - Optional Parametr in function ({ required int a, required int b, int c});
 - Function pass inside the Function void sumFunction (int a, int b, void Function (int,int) customSum) ====> sumFunction(5,6,sumParams)
 - Anonymous Function => sumAnonymousFunction(15,16,(int x, int y){ print(x+y);
+- Future Function  => Future<void> sumFuture(int a, int b) async{
+    await Future.delayed(Duretion(}
