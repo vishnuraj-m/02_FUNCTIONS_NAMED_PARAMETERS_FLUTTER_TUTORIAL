@@ -23,6 +23,10 @@ void main() {
   //* Future Function
   sumFuture(5, 8);
   print('After Sum Future');
+
+// *Future Function Pass to Future Function
+  sumF();
+  print('After Sum Future');
 }
 
 // !function no parameter no return value
@@ -69,4 +73,17 @@ void sumAnonymousFunction(int a, int b, void Function(int, int) customSum) {
 Future<void> sumFuture(int a, int b) async {
   await Future.delayed(Duration(seconds: 3));
   print('Sum Future :${a + b}');
+}
+
+//! Future Function Pass to Future Function
+
+Future<int> sumFuture1(int a, int b) async {
+  await Future.delayed(Duration(seconds: 3));
+  print('Sum Future1: ${a + b}');
+  return a + b;
+}
+
+Future<void> sumF() async {
+  await sumFuture(33, 22);
+  print('in just sum');
 }
