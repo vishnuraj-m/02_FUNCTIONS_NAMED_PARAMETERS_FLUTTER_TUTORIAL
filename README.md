@@ -5,3 +5,4 @@ in `lib/`, and example unit test in `test/`.
 - Function No Parameter No retun value
 - Function with Parameter with Return Value
 - Required Parametr in funtion ({ required int a, required int b});
+- Optional Parametr in function ({ required int a, required int b, int c});
