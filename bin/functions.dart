@@ -16,10 +16,13 @@ void main() {
   sumFunction(5, 6, sumParams);
 
   // *Anonymous Function
-
   sumAnonymousFunction(15, 16, (int x, int y) {
     print('Anonymous Function Sum : ${x + y}');
   });
+
+  //* Future Function
+  sumFuture(5, 8);
+  print('After Sum Future');
 }
 
 // !function no parameter no return value
@@ -59,4 +62,11 @@ void sumFunction(int a, int b, void Function(int, int) customSum) {
 
 void sumAnonymousFunction(int a, int b, void Function(int, int) customSum) {
   customSum(a, b);
+}
+
+// !Future Function
+
+Future<void> sumFuture(int a, int b) async {
+  await Future.delayed(Duration(seconds: 3));
+  print('Sum Future :${a + b}');
 }
