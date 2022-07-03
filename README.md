@@ -10,3 +10,4 @@ in `lib/`, and example unit test in `test/`.
 - Anonymous Function => sumAnonymousFunction(15,16,(int x, int y){ print(x+y);
 - Future Function  => Future<void> sumFuture(int a, int b) async{
     await Future.delayed(Duretion(}
+- Future Function pass to another Future Function
