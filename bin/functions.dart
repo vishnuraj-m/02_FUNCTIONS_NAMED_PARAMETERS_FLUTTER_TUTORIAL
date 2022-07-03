@@ -14,6 +14,12 @@ void main() {
 
   // *Function pass inside other Function
   sumFunction(5, 6, sumParams);
+
+  // *Anonymous Function
+
+  sumAnonymousFunction(15, 16, (int x, int y) {
+    print('Anonymous Function Sum : ${x + y}');
+  });
 }
 
 // !function no parameter no return value
@@ -46,5 +52,11 @@ void sumOptionalParams({required int a, required int b, int c = 0}) {
 // !Function pass inside other Function
 
 void sumFunction(int a, int b, void Function(int, int) customSum) {
+  customSum(a, b);
+}
+
+// !Anonymous Function
+
+void sumAnonymousFunction(int a, int b, void Function(int, int) customSum) {
   customSum(a, b);
 }
